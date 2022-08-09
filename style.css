@@ -1,47 +1,42 @@
 /*
 colors to use
 rgb(0, 107, 255) //blue
-rgb(0, 90, 211) // dark
+rgb(0, 90, 211) // dark blue
 rgb(255, 255, 255) //white
 rgb(204, 204, 204) //grey
 */
+:root{
+  --border-style: hidden;
+  --left-padding: 25px;
+  --padding-bottom: 3px;
+}
 
 * {
   box-sizing: border-box;
 /*   border: 1px solid grey; */
 }
 
+html {
+ background-color: #ffffff;
+
+}
+
 body {
-  background-color:rgb(0, 107, 255);
-  margin: 0;
-  height: 100vh;
+  background-color:rgb(255, 255, 255);
   font-family: 'DM Mono', monospace;
-  font-family: 'Finger Paint', cursive;
+  
+  max-width:720px;
+  margin: auto;
+  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.1)
+  
 }
 
 /* Mobile view first */
 
-main {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255); 
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.app-overview {
-  width: 100%;
-  height: 50%;
-}
-
 header {
-  background-color: rgb(0, 90, 211);
+  background-image: linear-gradient(rgb(0, 100, 230) 10%, rgb(0, 90, 211) 70%);
   color:white;
-  width: 100%;
-  padding: 2rem 1rem 0rem;
-  
+  padding: 2rem 1rem 0rem;  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,21 +46,203 @@ header h1,
 header p{
   margin: 0;
   font-size:medium;
-}
+} 
 header p {
   font-size: x-small;
+} 
+
+main {
+  background-color: rgb(255, 255, 255); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  padding: 2rem;
 }
 
 
-.app-overview div {
-  width: 100%;
-  height: 85%;
-/*   change height to auto after puting the elements in the div */
-  background: #ffffff url("img/background-image.png") no-repeat center top;
+.app-overview {
+  background: #ffffff url("img/background-image.png") no-repeat center top; 
   background-size: 100% 100%;
   color: rgb(255, 255, 255);
-  padding: 1rem;
 } 
+
+.app-overview h3 {
+  margin-top: 3rem ;
+  font-size: xx-large;
+}
+
+.app-overview img {
+  width: 35%;
+  height:auto;
+  float: right;
+  margin-right: 2rem;
+} 
+
+
+
+
+
+ 
+form{
+/*   margin-top: 2rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* input {
+  border-top-style: var(--border-style);
+  border-right-style: var(--border-style);
+  border-left-style: var(--border-style);
+  border-bottom-style: ridge;
+  border-bottom-width: thin;
+  width: 100%;
+  font-size: large;
+}
+
+
+
+#user_name{
+  background: rgb(255, 255, 255) url(img/username-icon.png) left no-repeat;
+  background-size: 15px 15px;
+  padding-left: var(--left-padding);
+  padding-bottom: var(--padding-bottom);
+  width: 330px;
+} */
+
+.input-container {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid grey;
+}
+.input-container:first-of-type {
+  margin-bottom: 2rem;
+}
+
+
+.input-container:hover {
+  border-bottom:1px solid rgb(0, 107, 255)  ;
+}
+
+.input-container img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.input-container input {
+  font-size: medium;
+  border: none;
+  flex-grow: 1;
+  padding: 2px 12px;
+  color: grey
+}
+
+.input-container input:focus{
+  color: rgb(0, 107, 255);
+  outline: none;
+}
+
+.tel-container,.tel-container:focus,.tel-container:hover{
+  width: 100%;
+  border-bottom:1px solid red;
+}
+
+/*
+#tel_number{
+  margin-bottom: 0;
+  background: rgb(255, 255, 255) url(img/phone-icon.png) left no-repeat;
+  background-size: 15px 15px;
+  padding-left: var(--left-padding);
+  padding-bottom: var(--padding-bottom);
+}
+
+.tel-container{
+  display: flex;
+  width:100%
+}
+
+img{
+  height: 30px;
+  width: 30px;
+}
+*/
+form .error{
+  color: rgb(218, 22, 31);
+  font-size: .6rem;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 1rem;
+} 
+
+.hidden{
+  visibility:hidden;
+}
+
+.btn {
+border: none;
+background: rgb(255, 255, 255);
+background-size: 15px 15px;
+padding: 12px;
+border-radius: 4px;
+font-family: "Arial",  sans-serif, serif;
+font-size: 1.2rem;
+cursor: pointer; 
+color: rgb(204, 204, 204);
+}
+  
+.btn-1 {
+  background-color: rgb(0, 107, 255);
+  color: rgb(255, 255, 255);
+}
+.btn-2 {
+  background-color: white;
+  border: 2px solid rgb(204, 204, 204);
+  color: rgb(204, 204, 204);
+  text-align: center;
+  vertical-align: center;
+}
+
+
+.google {
+color: rgb(0, 107, 255);
+padding: 5px;
+margin-right: 1rem;
+} 
+ .btn:hover {
+background-color: rgb(0, 90, 211);
+color: white;
+transition: 0.3s ease-in-out;
+cursor: pointer;
+} 
+ a:link {
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+#or {
+/*   margin: auto; */
+  display: flex;
+  align-items: center;
+}
+
+#or div {
+  height: 1px;
+  width: 20%;
+  border: 1px solid rgb(204, 204, 204);
+  flex-grow: 1;
+}
+
+#or p {
+  margin : 8px;
+  color: rgb(204, 204, 204);
+}
+
+
 
 /*tablet and desktop view  */
 /* @media only screen and (min-width: 600px) {

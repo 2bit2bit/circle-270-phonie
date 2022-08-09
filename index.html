@@ -11,28 +11,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Finger+Paint&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
+  <header>
+    <h1>PHONIE</h1>
+    <p>circle-270</p>
+  </header>
   <main>
     <section class="app-overview">
-      <header>
-        <h1>PHONIE</h1>
-        <p>circle-270</p>
-      </header>
-      <div>
-        <!--       add welcome back and phone image under here -->
-      </div>
-
+      <h3>Welcome </br> Back!</h3>
+      <img src="phone.gif">
     </section>
     <section class="form-section">
-      <!-- add form here  -->
+      <form id="form">
+
+        <div class="input-container">
+          <img src="img/username-icon.png" alt="p">
+
+          <input type="text" placeholder="Username" id="user_name" required>
+        </div>
+
+        <div class="input-container">
+          <img src="img/phone-icon.png" />
+          <!--           <select id="country-code" name="country-codes">
+            <option value="+234">+234</option>
+            <option value="+453">+453</option>
+          </select> -->
+          <input type="tel" placeholder="08123456789" id="tel_number" required>
+          <img class='network-logo' src="img/unknown.png" />
+        </div>
+
+        <p class="error hidden">Error message</p>
+
+        <button class="btn btn-1">Sign Up</button>
+
+        <div id="or">
+          <div></div>
+          <p>Or</p>
+          <div></div>
+        </div>
+
+        <!--         <button class="btn btn-2"><span class="google"><i class="fab fa-google"></i></span><a href="#">Sign in with
+            Google</a></button> -->
+        <a href="#" class="btn btn-2"><img src="img/google-icon.png" width="20px" height="20px"> Sign in with
+          Google</a></button>
+
+      </form>
     </section>
   </main>
 
   <!-- // ============= EEND DO NOT EDIT ============== // -->
   <script src="index.mjs" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
   <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
 
